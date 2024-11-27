@@ -25,7 +25,7 @@ app.use((err, req, res, next) => {
 });
 
 // Sincronizar la base de datos y arrancar el servidor
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.DB_PORT || 3000;
 
 sequelize.sync({ /* alter: true  */}).then(() => {
     console.log('Base de datos sincronizada');
