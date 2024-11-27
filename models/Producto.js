@@ -28,12 +28,12 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: 'Categoria', // Nombre de la tabla
-          key: 'id',           // Clave primaria de la tabla Categorias
+          model: 'Categoria', 
+          key: 'id',           
         },
       },
     }, {
-      tableName: 'productos', // Nombre de la tabla en la base de datos
+      tableName: 'Producto', // Nombre de la tabla en la base de datos
       timestamps: true,       // Si quieres los campos createdAt y updatedAt
     });
   
@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
     Producto.associate = (models) => {
       Producto.belongsTo(models.Categoria, {
         foreignKey: 'CategoriaId', // Campo que se relaciona con la clave primaria de Categoria
-        as: 'categoria',           // Alias para la relación
+        as: 'Categoria',           // Alias para la relación
       });
     };
   

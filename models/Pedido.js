@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
     }, {
-      tableName: 'pedido', // Nombre de la tabla en la base de datos
+      tableName: 'Pedido', // Nombre de la tabla en la base de datos
       timestamps: true, // Agrega los campos createdAt y updatedAt automáticamente
     });
   
